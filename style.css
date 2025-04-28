@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ods-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+/* Seção especial para os ODS principais */
+.ods-principais {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px dashed #0a7d45;
+}
+
+.ods-principais-titulo {
+    text-align: center;
+    color: #0a7d45;
+    margin: 10px 0 25px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #e0f2f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.ods-card {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ODS principais - destacados */
+.ods-card:nth-child(1), 
+.ods-card:nth-child(2),
+.ods-card:nth-child(3),
+.ods-card:nth-child(4),
+.ods-card:nth-child(5),
+.ods-card:nth-child(6),
+.ods-card:nth-child(7),
+.ods-card:nth-child(8) {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: 2px solid;
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+/* Espaçamento lateral para ODS destacados */
+.ods-grid:not(.ods-secundarios) .ods-card:nth-child(3n+1) {
+    margin-right: 10px;
+}
+
+.ods-grid:not(.ods-secundarios) .ods-card:nth-child(3n) {
+    margin-left: 10px;
+}
+
+.ods-card:nth-child(1) { border-color: #e5243b; }
+.ods-card:nth-child(2) { border-color: #DDA63A; }
+.ods-card:nth-child(3) { border-color: #4C9F38; }
+.ods-card:nth-child(4) { border-color: #C5192D; }
+.ods-card:nth-child(5) { border-color: #FF3A21; }
+.ods-card:nth-child(6) { border-color: #26BDE2; }
+.ods-card:nth-child(7) { border-color: #FCC30B; }
+.ods-card:nth-child(8) { border-color: #A21942; }
+
+/* Adiciona uma etiqueta "Principal" nos ODS destacados */
+.ods-card:nth-child(1)::after,
+.ods-card:nth-child(2)::after,
+.ods-card:nth-child(3)::after,
+.ods-card:nth-child(4)::after,
+.ods-card:nth-child(5)::after,
+.ods-card:nth-child(6)::after,
+.ods-card:nth-child(7)::after,
+.ods-card:nth-child(8)::after {
+    content: "Principal";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255,255,255,0.9);
+    color: #333;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Efeito de hover para os cards */
+.ods-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Efeito de hover específico para ODS principais */
+.ods-card:nth-child(1):hover, 
+.ods-card:nth-child(2):hover,
+.ods-card:nth-child(3):hover,
+.ods-card:nth-child(4):hover,
+.ods-card:nth-child(5):hover,
+.ods-card:nth-child(6):hover,
+.ods-card:nth-child(7):hover,
+.ods-card:nth-child(8):hover {
+    transform: scale(1.08) translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.ods-header {
+    color: white;
+    padding: 12px 15px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* Aumenta o tamanho do texto nos cabeçalhos dos ODS principais */
+.ods-card:nth-child(1) .ods-header,
+.ods-card:nth-child(2) .ods-header,
+.ods-card:nth-child(3) .ods-header,
+.ods-card:nth-child(4) .ods-header,
+.ods-card:nth-child(5) .ods-header,
+.ods-card:nth-child(6) .ods-header,
+.ods-card:nth-child(7) .ods-header,
+.ods-card:nth-child(8) .ods-header {
+    font-size: 1.05rem;
+    padding: 15px;
+}
+
+.ods-content {
+    background-color: white;
+    padding: 15px;
+    font-size: 0.85rem;
+}
+
+/* Melhora o contraste e tamanho do texto nos ODS principais */
+.ods-card:nth-child(1) .ods-content,
+.ods-card:nth-child(2) .ods-content,
+.ods-card:nth-child(3) .ods-content,
+.ods-card:nth-child(4) .ods-content,
+.ods-card:nth-child(5) .ods-content,
+.ods-card:nth-child(6) .ods-content,
+.ods-card:nth-child(7) .ods-content,
+.ods-card:nth-child(8) .ods-content {
+    font-size: 0.9rem;
+    background-color: #fcfcfc;
+    padding: 18px;
+}
+
+.ods-content ul {
+    list-style-position: inside;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.ods-content li {
+    margin-bottom: 3px;
+    font-size: 0.8rem;
+}
+
+/* Melhora o tamanho da lista nos ODS principais */
+.ods-card:nth-child(1) .ods-content li,
+.ods-card:nth-child(2) .ods-content li,
+.ods-card:nth-child(3) .ods-content li,
+.ods-card:nth-child(4) .ods-content li,
+.ods-card:nth-child(5) .ods-content li,
+.ods-card:nth-child(6) .ods-content li,
+.ods-card:nth-child(7) .ods-content li,
+.ods-card:nth-child(8) .ods-content li {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+/* ODS Colors */
+.ods-1 { background-color: #e5243b; }
+.ods-2 { background-color: #DDA63A; }
+.ods-3 { background-color: #4C9F38; }
+.ods-4 { background-color: #C5192D; }
+.ods-5 { background-color: #FF3A21; }
+.ods-6 { background-color: #26BDE2; }
+.ods-7 { background-color: #FCC30B; }
+.ods-8 { background-color: #A21942; }
+.ods-9 { background-color: #FD6925; }
+.ods-10 { background-color: #DD1367; }
+.ods-11 { background-color: #FD9D24; }
+.ods-12 { background-color: #BF8B2E; }
+.ods-13 { background-color: #3F7E44; }
+.ods-14 { background-color: #0A97D9; }
+.ods-15 { background-color: #56C02B; }
+.ods-16 { background-color: #00689D; }
+.ods-17 { background-color: #19486A; }
+
+/* Seção para ODS secundários */
+.ods-secundarios-titulo {
+    text-align: center;
+    color: #555;
+    margin: 10px 0 20px 0;
+    font-size: 1.1rem;
+    background-color: #f0f0f0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.indicators-section {
+    margin-top: 40px;
+    border-top: 2px solid #ddd;
+    padding-top: 20px;
+}
+
+.indicators-title {
+    text-align: center;
+    color: #0a7d45;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.data-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #0a7d45;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #56C02B;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: #e0f2f1;
+    color: #0a7d45;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+footer {
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+/* Logo ODS no footer */
+.ods-logo {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+/* Ajuste no container do footer para acomodar o logo */
+footer .container {
+    position: relative;
+    padding-right: 80px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-highlight {
+    color: #0a7d45;
+}
+
+/* Espaçador visual entre ODS principais e secundários */
+.ods-separator {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0a7d45, transparent);
+    margin: 40px 0;
+}
+
+@media (max-width: 768px) {
+    .ods-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Mantém o destaque mesmo em visualização móvel */
+    .ods-card:nth-child(1), 
+    .ods-card:nth-child(2),
+    .ods-card:nth-child(3),
+    .ods-card:nth-child(4),
+    .ods-card:nth-child(5),
+    .ods-card:nth-child(6),
+    .ods-card:nth-child(7),
+    .ods-card:nth-child(8) {
+        transform: scale(1.03);
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+    
+    /* Remove margens laterais em dispositivos móveis */
+    .ods-grid:not(.ods-secundarios) .ods-card:nth-child(3n+1),
+    .ods-grid:not(.ods-secundarios) .ods-card:nth-child(3n) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Ajuste do logo no footer para mobile */
+    .ods-logo {
+        position: static;
+        display: block;
+        margin: 10px auto 0;
+    }
+    
+    footer .container {
+        padding-right: 20px;
+    }
+}
