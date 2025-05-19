@@ -63,7 +63,7 @@ header {
 .ods-card:nth-child(2),
 .ods-card:nth-child(3),
 .ods-card:nth-child(4),
-.ods-card:nth-child(5),
+.ods-card:nth-child(15),
 .ods-card:nth-child(6),
 .ods-card:nth-child(7),
 .ods-card:nth-child(8) {
@@ -88,7 +88,7 @@ header {
 .ods-card:nth-child(2) { border-color: #DDA63A; }
 .ods-card:nth-child(3) { border-color: #4C9F38; }
 .ods-card:nth-child(4) { border-color: #C5192D; }
-.ods-card:nth-child(5) { border-color: #FF3A21; }
+.ods-card:nth-child(15) { border-color: #56C02B; }
 .ods-card:nth-child(6) { border-color: #26BDE2; }
 .ods-card:nth-child(7) { border-color: #FCC30B; }
 .ods-card:nth-child(8) { border-color: #A21942; }
@@ -98,10 +98,10 @@ header {
 .ods-card:nth-child(2)::after,
 .ods-card:nth-child(3)::after,
 .ods-card:nth-child(4)::after,
-.ods-card:nth-child(5)::after,
 .ods-card:nth-child(6)::after,
 .ods-card:nth-child(7)::after,
-.ods-card:nth-child(8)::after {
+.ods-card:nth-child(8)::after,
+.ods-card:nth-child(15)::after {
     content: "Principal";
     position: absolute;
     top: 5px;
@@ -126,7 +126,7 @@ header {
 .ods-card:nth-child(2):hover,
 .ods-card:nth-child(3):hover,
 .ods-card:nth-child(4):hover,
-.ods-card:nth-child(5):hover,
+.ods-card:nth-child(15):hover,
 .ods-card:nth-child(6):hover,
 .ods-card:nth-child(7):hover,
 .ods-card:nth-child(8):hover {
@@ -146,7 +146,7 @@ header {
 .ods-card:nth-child(2) .ods-header,
 .ods-card:nth-child(3) .ods-header,
 .ods-card:nth-child(4) .ods-header,
-.ods-card:nth-child(5) .ods-header,
+.ods-card:nth-child(15) .ods-header,
 .ods-card:nth-child(6) .ods-header,
 .ods-card:nth-child(7) .ods-header,
 .ods-card:nth-child(8) .ods-header {
@@ -165,7 +165,7 @@ header {
 .ods-card:nth-child(2) .ods-content,
 .ods-card:nth-child(3) .ods-content,
 .ods-card:nth-child(4) .ods-content,
-.ods-card:nth-child(5) .ods-content,
+.ods-card:nth-child(15) .ods-content,
 .ods-card:nth-child(6) .ods-content,
 .ods-card:nth-child(7) .ods-content,
 .ods-card:nth-child(8) .ods-content {
@@ -190,7 +190,7 @@ header {
 .ods-card:nth-child(2) .ods-content li,
 .ods-card:nth-child(3) .ods-content li,
 .ods-card:nth-child(4) .ods-content li,
-.ods-card:nth-child(5) .ods-content li,
+.ods-card:nth-child(15) .ods-content li,
 .ods-card:nth-child(6) .ods-content li,
 .ods-card:nth-child(7) .ods-content li,
 .ods-card:nth-child(8) .ods-content li {
