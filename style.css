@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background-color: #f5f5f5;
+    background-color: #80affa;
     color: #333;
     padding: 1rem 0;
     text-align: center;
@@ -273,7 +273,7 @@ tr:hover {
 }
 
 footer {
-    background-color: #f5f5f5;
+    background-color: #80affa;
     color: #333;
     text-align: center;
     padding: 1rem 0;
@@ -350,3 +350,117 @@ footer .container {
         padding-right: 20px;
     }
 }
+.references-container {
+            margin-top: 2rem;
+        }
+        
+        .reference-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .reference-header {
+            background-color: var(--dark-color);
+            color: #333;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .reference-header h4 {
+            margin: 0;
+            font-size: 1.25rem;
+            flex: 1;
+        }
+        
+        .reference-category {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        
+        .reference-content {
+            padding: 1.5rem;
+        }
+        
+        .reference-content p {
+            margin-bottom: 1rem;
+        }
+        
+        .reference-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .reference-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: #333;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s, transform 0.2s;
+            margin: 1rem 0;
+            font-weight: bold;
+        }
+        
+        .reference-link:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        .reference-date {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .institutional-sources {
+            margin: 3rem 0;
+        }
+        
+        .source-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .source-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .source-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .source-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+        
+        .source-card p {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        
+        .source-card .reference-link {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0 0 0;
+        }
